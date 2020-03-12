@@ -4,6 +4,8 @@ import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import com.example.expertisetestoutline.model.Agent;
@@ -36,6 +38,13 @@ public class AgentServiceImpl implements AgentService {
 		}
 		Agent save = agentRepo.save(agent);
 		return save;
+	}
+
+	@Override
+	public Page<Agent> getPrintersResponse(PageRequest pageRequest) {
+		Page<Agent> printersList = null;
+		printersList = agentRepo.findAll(pageRequest);
+		return printersList;
 	}
 
 	

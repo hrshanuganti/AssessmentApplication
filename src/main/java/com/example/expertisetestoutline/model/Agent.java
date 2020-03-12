@@ -12,28 +12,24 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "AGENT")
 public class Agent {
-	 
+
 	@Column(name = "id")
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)    
-    private Long id;
-    
-	@Column(name = "firstName")   
-    private String firstName;
-    
-	@Column(name = "lastName")   
-    private String lastName;
-    
-	@Column(name = "idNumber")  
-    private String idNumber;
-    
-   // @ManyToOne
-    @ManyToOne(cascade=CascadeType.ALL)  
-    private Team team;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-  
-    
-   
+	@Column(name = "firstName")
+	private String firstName;
+
+	@Column(name = "lastName")
+	private String lastName;
+
+	@Column(name = "idNumber")
+	private String idNumber;
+
+	// @ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Team team;
 
 	public Long getId() {
 		return id;
@@ -44,34 +40,34 @@ public class Agent {
 	}
 
 	public String getFirstName() {
-        return firstName;
-    }
+		return firstName;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public Team getTeam() {
-        return team;
-    }
+	public Team getTeam() {
+		return team;
+	}
 
-    public void setTeam(Team team) {
-        this.team = team;
-    }
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 
-    public String getIdNumber() {
-        return idNumber;
-    }
+	public String getIdNumber() {
+		return idNumber;
+	}
 
-    public void setIdNumber(String idNumber) {
-        this.idNumber = idNumber;
-    }
+	public void setIdNumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
 }

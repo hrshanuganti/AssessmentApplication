@@ -11,26 +11,21 @@ import javax.persistence.Table;
 @Table(name = "TEAM")
 public class Team {
 
-   
 	@Column(name = "id")
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO) 
-	 private Long id;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 
-	
 	@Column(name = "NAME")
-    private String name;
-	
-	
-
+	private String name;
 
 	public String getName() {
-        return name;
-    }
+		return name;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Long getId() {
 		return id;
@@ -40,8 +35,4 @@ public class Team {
 		this.id = id;
 	}
 
-	
-	
-	
-    
 }
